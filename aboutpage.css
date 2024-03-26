@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+    display: flex; /* flexbox for better layout */
+    justify-content: space-between; /* Distribute buttons evenly */
+  }
+  
+  .navbar a {
+    flex: 1; /* Make each button take up equal space */
+    padding: 12px;
+    color: rgb(182, 182, 182);
+    text-decoration: none;
+    font-size: 17px;
+    text-align: center;
+  }
+  
+  .navbar a:hover {
+    background-color: #0f6ab4;
+  }
+  
+  .navbar a.active {
+    background-color: #0f6ab4;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      flex-basis: 100%; /* Stack buttons on narrow screens */
+    }
+  }
+  
+  .container {
+    display: grid;
+    align-items: center; /* Keep content vertically centered */
+    grid-template-columns: 1fr 2fr; /* Adjust column widths (image: 2x text) */
+    column-gap: 5px;
+  }
+  
+  img {
+    max-width: 100%; /* Allow image to shrink to fit container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .text {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  footer {
+    background-color: #cbcbcb; /* light gray background */
+  }
+  
